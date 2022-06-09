@@ -230,8 +230,8 @@ Resources:
                     -   s3:Get*
                     -   s3:List*
                     Resource: 
-                    -   arn:aws:s3:::udagram419804828851bucket  #change
-                    -   arn:aws:s3:::udagram419804828851bucket/* #change
+                    -   arn:aws:s3:::udagram419804828851bucket  
+                    -   arn:aws:s3:::udagram419804828851bucket/* 
             Roles:
             -   Ref: UdagramS3ReadOnlyEC2
 # Profile of the EC2 instance as a function of the access role above  
@@ -292,7 +292,6 @@ Resources:
                     sudo rm /var/www/html/index.html #remove the existing index.html
                     aws s3 cp s3://udagram419804828851bucket/build.zip .     
                     unzip build.zip -d /var/www/html
-                    mv -v ~/uliya-html/* ~/var/www/html
                     sudo systemctl restart apache2.service #restart apache  
             ImageId: ami-09d56f8956ab235b3                     
             KeyName: todakKeyPair
