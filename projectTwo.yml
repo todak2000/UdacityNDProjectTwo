@@ -294,7 +294,6 @@ Resources:
                     unzip build.zip -d /var/www/html
                     sudo systemctl restart apache2.service #restart apache  
             ImageId: ami-09d56f8956ab235b3                     
-            KeyName: EnterYourPairKeyGenerated
             IamInstanceProfile: !Ref UdagramInstanceProfile
             SecurityGroups:
             -   Ref: WebServerSecGroup
